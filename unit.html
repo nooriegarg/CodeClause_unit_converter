@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js" integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        function loadlength(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="visible";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadarea(){
+            //history.pushState({},"","");
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("area").style.visibility="visible";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadmass(){
+            //history.pushState({},"","");
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="visible";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadtime(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="visible";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadtemperature(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="visible";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadvolume(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="visible";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadspeed(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="visible";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadpressure(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="visible";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadfrequency(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="visible";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadenergy(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="visible";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loadangle(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="visible";
+            document.getElementById("digital").style.visibility="hidden";
+        }
+        function loaddigital(){
+            //history.pushState({},"","");
+            document.getElementById("area").style.visibility="hidden";
+            document.getElementById("length").style.visibility="hidden";
+            document.getElementById("mass").style.visibility="hidden";
+            document.getElementById("time").style.visibility="hidden";
+            document.getElementById("temperature").style.visibility="hidden";
+            document.getElementById("volume").style.visibility="hidden";
+            document.getElementById("speed").style.visibility="hidden";
+            document.getElementById("pressure").style.visibility="hidden";
+            document.getElementById("frequency").style.visibility="hidden";
+            document.getElementById("energy").style.visibility="hidden";
+            document.getElementById("angle").style.visibility="hidden";
+            document.getElementById("digital").style.visibility="visible";
+        }
+    </script>
+    
+</head>
+<body>
+
+    <nav>
+        <div class="head">
+            <h1>UNIT CONVERTER</h1>
+        </div>
+    </nav>
+
+
+    
+    
+    <ul>
+        <a href="#" onclick="loadlength()"><li>Length</li></a>
+        <a href="#" onclick="loadarea()"><li>Area</li></a><br>
+        <a href="#" onclick="loadmass()"><li>Mass</li></a>
+        <a href="#" onclick="loadtime()"><li>Time</li></a><br>
+        <a href="#" onclick="loadtemperature()"><li>Temperature</li></a>
+        <a href="#" onclick="loadvolume()"><li>Volume</li></a><br>
+        <a href="#" onclick="loadspeed()"><li>Speed</li></a>
+        <a href="#" onclick="loadpressure()"><li>Pressure</li></a><br>
+        <a href="#" onclick="loadfrequency()"><li>Frequency</li></a>
+        <a href="#" onclick="loadenergy()"><li>Energy</li></a><br>
+        <a href="#" onclick="loadangle()"><li>Plane Angle</li></a>
+        <a href="#" onclick="loaddigital()"><li>Digital Storage</li></a>
+    </ul>
+
+    <div class="converter-body" id="length" style = "visibility:hidden">
+
+        <h1 class="converter-title">Length Converter</h1>
+        <input type="text" placeholder="Input" id="input">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result">
+
+        <select id="InputType">
+            <option value="kilometer">Kilometer</option>
+            <option value="meter">Meter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="micrometer">Micrometer</option>
+            <option value="nanometer">Nanometer</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+        </select>
+
+        <select id="ResultType">
+            <option value="kilometer">Kilometer</option>
+            <option value="meter">Meter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="micrometer">Micrometer</option>
+            <option value="nanometer">Nanometer</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+        </select>
+
+    </div>    
+
+
+
+    <div class="converter-body" id="area" style = "visibility:hidden">
+
+        <h1 class="converter-title">Area Converter</h1>
+        <input type="text" placeholder="Input" id="input1">
+         <span>=</span>
+        <input type="text" placeholder="Result" id="result1">
+    
+        <select id="InputType1">
+            <option value="square kilometer">Square kilometer</option>
+            <option value="square meter">Square meter</option>
+            <option value="square mile">Square mile</option>
+            <option value="square yard">Square yard</option>
+            <option value="square foot">Square foot</option>
+            <option value="square inch">Square inch</option>
+             <option value="hectare">Hectare</option>
+            <option value="acre">Acre</option>
+        </select>
+    
+        <select id="ResultType1">
+            <option value="square kilometer">Square kilometer</option>
+            <option value="square meter">Square meter</option>
+            <option value="square mile">Square mile</option>
+            <option value="square yard">Square yard</option>
+            <option value="square foot">Square foot</option>
+            <option value="square inch">Square inch</option>
+            <option value="hectare">Hectare</option>
+            <option value="acre">Acre</option>
+         </select>
+    </div>
+
+
+    <div class="converter-body" id="mass" style = "visibility:hidden">
+
+        <h1 class="converter-title">Mass Converter</h1>
+        <input type="text" placeholder="Input" id="input2">
+         <span>=</span>
+        <input type="text" placeholder="Result" id="result2">
+    
+        <select id="InputType2">
+            <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="milligram">Milligram</option>
+            <option value="microgram">Microgram</option>
+            <option value="imperial ton">Imperial ton</option>
+            <option value="stone">Stone</option>
+            <option value="pound">Pound</option>
+            <option value="ounce">Ounce</option>
+        </select>
+    
+        <select id="ResultType2">
+            <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="milligram">Milligram</option>
+            <option value="microgram">Microgram</option>
+            <option value="imperial ton">Imperial ton</option>
+            <option value="stone">Stone</option>
+            <option value="pound">Pound</option>
+            <option value="ounce">Ounce</option>
+         </select>
+    </div>
+
+
+    <div class="converter-body" id="time" style = "visibility:hidden">
+
+        <h1 class="converter-title">Time Converter</h1>
+        <input type="text" placeholder="Input" id="input3">
+         <span>=</span>
+        <input type="text" placeholder="Result" id="result3">
+    
+        <select id="InputType3">
+            <option value="second">Second</option>
+            <option value="millisecond">Millisecond</option>
+            <option value="microsecond">Microsecond</option>
+            <option value="nanosecond">Nanosecond</option>
+            <option value="minute">Minute</option>
+            <option value="hour">Hour</option>
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+        </select>
+    
+        <select id="ResultType3">
+            <option value="second">Second</option>
+            <option value="millisecond">Millisecond</option>
+            <option value="microsecond">Microsecond</option>
+            <option value="nanosecond">Nanosecond</option>
+            <option value="minute">Minute</option>
+            <option value="hour">Hour</option>
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+         </select>
+    </div>
+
+
+    <div class="converter-body" id="temperature" style = "visibility:hidden">
+
+        <h1 class="converter-title">Temperature Converter</h1>
+        <input type="text" placeholder="Input" id="input4">
+         <span>=</span>
+        <input type="text" placeholder="Result" id="result4">
+    
+        <select id="InputType4">
+            <option value="degree celsius">Degree celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+    
+        <select id="ResultType4">
+            option value="degree celsius">Degree celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+         </select>
+    </div>
+
+
+    <div class="converter-body" id="volume" style = "visibility:hidden">
+
+        <h1 class="converter-title" >Volume Converter</h1>
+        <input type="text" placeholder="Input" id="input5">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result5">
+
+        <select id="InputType5">
+            <option value="cubic meter">Cubic meter</option>
+            <option value="cubic kilometer">Cubic kilometer</option>
+            <option value="liter">Liter</option>
+            <option value="milliliter">Milliliter</option>
+            <option value="us gallon">US Gallon</option>
+            <option value="imperial gallon">Imperial gallon</option>
+            <option value="cubic mile">Cubic mile</option>
+            <option value="cubic yard">Cubic yard</option>
+            <option value="cubic foot">Cubic foot</option>
+            <option value="cubic inch">Cubic inch</option>
+        </select>
+
+        <select id="ResultType5">
+            <option value="cubic meter">Cubic meter</option>
+            <option value="cubic kilometer">Cubic kilometer</option>
+            <option value="liter">Liter</option>
+            <option value="milliliter">Milliliter</option>
+            <option value="us gallon">US Gallon</option>
+            <option value="imperial gallon">Imperial gallon</option>
+            <option value="cubic mile">Cubic mile</option>
+            <option value="cubic yard">Cubic yard</option>
+            <option value="cubic foot">Cubic foot</option>
+            <option value="cubic inch">Cubic inch</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="speed" style = "visibility:hidden">
+
+        <h1 class="converter-title" >Speed Converter</h1>
+        <input type="text" placeholder="Input" id="input6">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result6">
+
+        <select id="InputType6">
+            <option value="mile per hour">Mile per hour</option>
+            <option value="foot per second">Foot per second</option>
+            <option value="meter per second">Meter per second</option>
+            <option value="Kilometer per hour">Kilometer per hour</option>
+            <option value="knot">Knot</option>
+        </select>
+
+        <select id="ResultType6">
+            <option value="mile per hour">Mile per hour</option>
+            <option value="foot per second">Foot per second</option>
+            <option value="meter per second">Meter per second</option>
+            <option value="Kilometer per hour">Kilometer per hour</option>
+            <option value="knot">Knot</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="pressure" style = "visibility:hidden">
+
+        <h1 class="converter-title" >Pressure Converter</h1>
+        <input type="text" placeholder="Input" id="input7">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result7">
+
+        <select id="InputType7">
+            <option value="bar">Bar</option>
+            <option value="pascal">Pascal</option>
+            <option value="pound per square inch">Pound per square inch</option>
+            <option value="standard atmosphere">Standard atmosphere</option>
+            <option value="torr">Torr</option>
+        </select>
+
+        <select id="ResultType7">
+            <option value="bar">Bar</option>
+            <option value="pascal">Pascal</option>
+            <option value="pound per square inch">Pound per square inch</option>
+            <option value="standard atmosphere">Standard atmosphere</option>
+            <option value="torr">Torr</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="frequency" style = "visibility:hidden">
+
+        <h1 class="converter-title">Frequency Converter</h1>
+        <input type="text" placeholder="Input" id="input8">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result8">
+
+        <select id="InputType8">
+            <option value="hertz">Hertz</option>
+            <option value="kilohertz">Kilohertz</option>
+            <option value="megahertz">Megahertz</option>
+            <option value="gigahertz">Gigahertz</option>
+        </select>
+
+        <select id="ResultType8">
+            <option value="hertz">Hertz</option>
+            <option value="kilohertz">Kilohertz</option>
+            <option value="megahertz">Megahertz</option>
+            <option value="gigahertz">Gigahertz</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="energy" style = "visibility:hidden">
+
+        <h1 class="converter-title" >Energy Converter</h1>
+        <input type="text" placeholder="Input" id="input9">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result9">
+
+        <select id="InputType9">
+            <option value="joule">Joule</option>
+            <option value="kilojoule">Kilojoule</option>
+            <option value="gram calorie">Gram calorie</option>
+            <option value="kilo calorie">Kilo calorie</option>
+            <option value="watt hour">Watt hour</option>
+            <option value="kilowatt hour">Kilowatt hour</option>
+            <option value="electronvolt">Electronvolt</option>
+        </select>
+
+        <select id="ResultType9">
+            <option value="joule">Joule</option>
+            <option value="kilojoule">Kilojoule</option>
+            <option value="gram calorie">Gram calorie</option>
+            <option value="kilo calorie">Kilo calorie</option>
+            <option value="watt hour">Watt hour</option>
+            <option value="kilowatt hour">Kilowatt hour</option>
+            <option value="electronvolt">Electronvolt</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="angle" style = "visibility:hidden">
+
+        <h1 class="converter-title" >PLane Angle Converter</h1>
+        <input type="text" placeholder="Input" id="input10">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result10">
+
+        <select id="InputType10">
+            <option value="degree">Degree</option>
+            <option value="gradian">Gradian</option>
+            <option value="radian">Radian</option>
+            <option value="arcsecond">Arcsecond</option>
+        </select>
+
+        <select id="ResultType10">
+            <option value="degree">Degree</option>
+            <option value="gradian">Gradian</option>
+            <option value="radian">Radian</option>
+            <option value="arcsecond">Arcsecond</option>
+        </select>
+
+    </div>    
+
+
+    <div class="converter-body" id="digital" style = "visibility:hidden">
+
+        <h1 class="converter-title" >Digital Storage Converter</h1>
+        <input type="text" placeholder="Input" id="input11">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result11">
+
+        <select id="InputType11">
+            <option value="bit">Bit</option>
+            <option value="kilobit">Kilobit</option>
+            <option value="megabit">Megabit</option>
+            <option value="gigabit">Gigabit</option>
+            <option value="terabit">Terabit</option>
+            <option value="byte">Byte</option>
+            <option value="kilobyte">Kilobyte</option>
+            <option value="megabyte">Megabyte</option>
+            <option value="gigabyte">Gigabyte</option>
+            <option value="terabyte">Terabyte</option>
+        </select>
+
+        <select id="ResultType11">
+            <option value="bit">Bit</option>
+            <option value="kilobit">Kilobit</option>
+            <option value="megabit">Megabit</option>
+            <option value="gigabit">Gigabit</option>
+            <option value="terabit">Terabit</option>
+            <option value="byte">Byte</option>
+            <option value="kilobyte">Kilobyte</option>
+            <option value="megabyte">Megabyte</option>
+            <option value="gigabyte">Gigabyte</option>
+            <option value="terabyte">Terabyte</option>
+        </select>
+
+    </div>    
+
+    <button onclick="myFunction()">calc</button>
+    <form>
+        <table id="calc">
+            <tr>
+                <td colspan="6">
+                    <input id="display" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="display.value += '1'"></td>
+                <td><input type="button" value="2" onclick="display.value += '2'"></td>
+                <td><input type="button" value="3" onclick="display.value += '3'"></td>
+                <td><input type="button" value="C" onclick="display.value = ''"></td>
+                <td><input type="button" value="&#9003;" onclick="backspace()"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="display.value += '4'"></td>
+                <td><input type="button" value="5" onclick="display.value += '5'"></td>
+                <td><input type="button" value="6" onclick="display.value += '6'"></td>
+                <td><input type="button" value="-" onclick="display.value += '-'"></td>
+                <td><input type="button" value="%" onclick="display.value += '%'"></td>
+                <td><input type="button" value="cos(" onclick="display.value += 'cos('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="display.value += '7'"></td>
+                <td><input type="button" value="8" onclick="display.value += '8'"></td>
+                <td><input type="button" value="9" onclick="display.value += '9'"></td>
+                <td><input type="button" value="x" onclick="display.value += '*'"></td>
+                <td><input type="button" value="!" onclick="display.value += '!'"></td>
+                <td><input type="button" value="sin(" onclick="display.value += 'sin('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="display.value += '.'"></td>
+                <td><input type="button" value="0" onclick="display.value += '0'"></td>
+                <td><input type="button" value="," onclick="display.value += ','"></td>
+                <td><input type="button" value="+" onclick="display.value += '+'"></td>
+                <td><input type="button" value="/" onclick="display.value += '/'"></td>
+                <td><input type="button" value="tan(" onclick="display.value += 'tan('"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="E" onclick="e()"></td>
+                <td><input type="button" value="pi" onclick="pi()"></td>
+                <td><input type="button" value="^" onclick="power()"></td>
+                <td><input type="button" value="(" onclick="display.value += '('"></td>
+                <td><input type="button" value=")" onclick="display.value += ')'"></td>
+                <td><input type="button" value="log(" onclick="base10Log()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="sqrt(" onclick="squareRoot()"></td>
+                <td><input type="button" value="ln2" onclick="display.value += Math.LN2"></td>
+                <td><input type="button" value="log10(" onclick="base10Log()"></td>
+                <td><input type="button" value="l2e" onclick="display.value += Math.LOG2E"></td>
+                <td><input type="button" value="l10e" onclick="display.value += Math.LOG10E"></td>
+                <td><input type="button" value="exp(" onclick="display.value += 'exp('"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+
+    <script src="js/main2.js">loadlength()</script>
+    <script src="js/main1.js">loadarea()</script>
+    <script src="js/main3.js">loadmass()</script>
+    <script src="js/main4.js">loadtime()</script>
+    <script src="js/main5.js">loadtemperature()</script>
+    <script src="js/main6.js">loadvolume()</script>
+    <script src="js/main7.js">loadspeed()</script>
+    <script src="js/main8.js">loadpressure()</script>
+    <script src="js/main9.js">loadfreqeuncy()</script>
+    <script src="js/main10.js">loadenergy()</script>
+    <script src="js/main11.js">loadangle()</script>
+    <script src="js/main12.js">loaddigital()</script>
+    <script>loadlength()</script>
+    <script src="calc.js"></script>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("calc");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+    
+</body>
+</html>
