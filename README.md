@@ -1,47 +1,48 @@
 # CodeClause_unit_converter
 
-Features
+This project is a web-baseed unit converter and scientific calculator built using HTML,CSS and javascript. It was developed as part of my internship at CodeClause.The goal of this project is to provide users with a convenient tool to convert between different units of measurement and perform scientific calculations within their web browser.
+
+Features:
+
 The unit converter supports conversions for the following 12 categories:
 
-Length
-Mass
-Volume
-Time
-Temperature
-Pressure
-Speed
-Digital Storage
-Plane Angle
-Frequency
-Energy
-Area
+1.Length
+2.Mass
+3.Volume
+4.Time
+5.Temperature
+6.Pressure
+7.Speed
+8.Digital Storage
+9.Plane Angle
+10.Frequency
+11.Energy
+12.Area
 The scientific calculator allows users to perform advanced mathematical calculations with ease.
 
-How to Use
+How to Use:-
 To use the unit converter and scientific calculator, follow these steps:
 
-Clone or download the project from the GitHub repository.
-Open the index.html file in your preferred web browser.
-Select the category you wish to convert from the dropdown menu.
-Enter the value you want to convert in the input field.
-Choose the source unit and the target unit from their respective dropdown menus.
-Click the "Convert" button to view the converted result.
+1.Clone or download the project from the GitHub repository.
+2.Open the "unit.html" file in your preferred web browser.
+3.Select the category you wish to convert from the dropdown menu.
+4.Enter the value you want to convert in the input field.
+5.Choose the source unit and the target unit from their respective dropdown menus.
+
 For the scientific calculator, you can perform calculations using the provided mathematical operators and functions. Enter the expression in the input field and click the "Calculate" button to see the result.
 
-Technologies Used
+Technologies Used:-
 This project utilizes the following technologies:
 
-HTML: The structure and layout of the web page.
-CSS: Styling and visual enhancements.
-JavaScript: Implementation of unit conversions and scientific calculator functionalities.
-Contributing
+1.HTML: The structure and layout of the web page.
+2.CSS: Styling and visual enhancements.
+3.JavaScript: Implementation of unit conversions and scientific calculator functionalities.
+
+Contributing:-
 As this project was developed during my internship at CodeClause, contributions are not open to the public. However, if you have any suggestions or feedback, feel free to reach out to me or the CodeClause team.
 
-License
-This project is licensed under the MIT License.
-
-Acknowledgments
+Acknowledgments:-
 I would like to express my gratitude to the team at CodeClause for providing me with the opportunity to work on this project during my internship. Their guidance and support were invaluable in the development process.
 
-Contact
-For any inquiries or further information about this project, please contact [your email address or other contact information].
+Contact:-
+For any inquiries or further information about this project, please contact through my email- nooriegarg122@gmail.com
